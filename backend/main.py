@@ -63,6 +63,13 @@ def chat_repo(repo_id: str, req: ChatRequest):
 
 @app.post("/webhook/github")
 async def github_webhook(request: Request):
+    signature = request.headers.get("X-Hub-Signature-256")
+    body = await request.body()
+
+    if not github_service.verify_signature(body, signature):
+        logging.warning("Invalid webhook signature")
+        raise HTTPException(status_code=401, detail="Invalid signature")
+
     payload = await request.json()
     if github_service.is_pr_merged(payload):
         contributor, repo_name = github_service.extract_contributor(payload)
