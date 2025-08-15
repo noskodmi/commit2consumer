@@ -1,0 +1,9 @@
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+gitpython==3.1.43
+langchain==0.2.6
+langchain-openai==0.1.7
+chromadb==0.4.24
+openai==1.35.13
+python-dotenv==1.0.1
+web3==6.19.0
