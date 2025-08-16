@@ -12,10 +12,11 @@ from app.services.github_service import GitHubService
 from app.services.rag_service import RAGService
 from app.services.background_tasks import process_repository_task
 from app.services.documentation_generator import DocumentationGenerator
+from app.api.benchmark_routes import benchmark_router
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
-
+router.include_router(benchmark_router, prefix="/benchmark", tags=["benchmarks"])
 # Pydantic models for request/response
 from pydantic import BaseModel, HttpUrl
 

@@ -3,6 +3,9 @@ import { useState } from 'react';
 import Layout from '@/components/Layout';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { useRepository } from '@/hooks/useRepositories';
+import { repositoryApi } from '@/lib/api';
+import { useSearch } from '@/hooks/useSearch';
+import toast from 'react-hot-toast';
 import { 
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,

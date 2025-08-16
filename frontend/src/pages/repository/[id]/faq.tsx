@@ -24,10 +24,13 @@ export default function FAQPage() {
   
   const { repository, loading: repoLoading } = useRepository(id as string);
   
-  const { data: faqData, loading: faqLoading, error } = useSWR(
-    repository?.status === 'completed' ? `faq-${id}` : null,
-    () => repositoryApi.getFaq(id as string)
-  );
+const { data: faqData, error } = useSWR(
+  repository?.status === 'completed' ? `faq-${id}` : null,
+  () => repositoryApi.getFaq(id as string)
+);
+
+const faqLoading = !faqData && !error;
+
 
   const toggleExpanded = (index: number) => {
     const newExpanded = new Set(expandedItems);

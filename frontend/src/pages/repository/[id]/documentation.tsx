@@ -15,10 +15,13 @@ export default function DocumentationPage() {
   
   const { repository, loading: repoLoading } = useRepository(id as string);
   
-  const { data: documentation, loading: docLoading, error } = useSWR(
-    repository?.status === 'completed' ? `documentation-${id}` : null,
-    () => repositoryApi.getDocumentation(id as string)
-  );
+const { data: documentation, error } = useSWR(
+  repository?.status === 'completed' ? `documentation-${id}` : null,
+  () => repositoryApi.getDocumentation(id as string)
+);
+
+const docLoading = !documentation && !error;
+
 
   if (repoLoading || docLoading) {
     return (

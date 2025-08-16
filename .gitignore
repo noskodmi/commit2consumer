@@ -7,3 +7,4 @@ frontend/package-lock.json
 frontend/.next
 backend/venv
 backend/.env
+.env

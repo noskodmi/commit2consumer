@@ -1,8 +1,7 @@
-from pydantic_settings import BaseSettings
 from typing import List
 import os
 
-class Settings(BaseSettings):
+class Settings():
     # Environment
     ENVIRONMENT: str = "development"
     DEBUG: bool = True

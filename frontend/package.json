@@ -21,8 +21,8 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-hot-toast": "^2.4.1",
     "swr": "^2.2.4",
-    "lucide-react": "^0.294.0",
-    "date-fns": "^2.30.0"
+    "date-fns": "^2.30.0",
+    "recharts": "^2.8.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.0",

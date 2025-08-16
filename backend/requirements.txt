@@ -15,9 +15,10 @@ pydantic==2.5.0
 httpx==0.25.2
 tenacity==8.2.3
 sentence-transformers==2.2.2
-tree-sitter==0.20.4
-tree-sitter-python==0.20.4
-tree-sitter-javascript==0.20.2
-tree-sitter-typescript==0.20.3
+tree-sitter==0.23.2
+tree-sitter-python==0.23.2
+tree-sitter-javascript==0.23.1
+tree-sitter-typescript==0.23.2
 regex==2023.10.3
 tiktoken==0.5.2
+PyGithub==2.7.0

@@ -120,31 +120,31 @@ export default function ChatInterface({
                 <div className="prose prose-sm max-w-none">
                   {message.role === 'user' ? (
                     <p className="text-white m-0">{message.content}</p>
-                  ) : (
-                    <ReactMarkdown
-                      remarkPlugins={[remarkGfm]}
-                      components={{
-                        code({ node, inline, className, children, ...props }) {
-                          const match = /language-(\w+)/.exec(className || '');
-                          return !inline && match ? (
-                            <SyntaxHighlighter
-                              style={tomorrow}
-                              language={match[1]}
-                              PreTag="div"
-                              {...props}
-                            >
-                              {String(children).replace(/\n$/, '')}
-                            </SyntaxHighlighter>
-                          ) : (
-                            <code className={className} {...props}>
-                              {children}
-                            </code>
-                          );
-                        },
-                      }}
-                    >
-                      {message.content}
-                    </ReactMarkdown>
+                  ) : ( "lol"
+                    // <ReactMarkdown
+                    //   remarkPlugins={[remarkGfm]}
+                    //   components={{
+                    //     code({ node, inline, className, children, ...props }) {
+                    //       const match = /language-(\w+)/.exec(className || '');
+                    //       return !inline && match ? (
+                    //         <SyntaxHighlighter
+                    //           style={tomorrow}
+                    //           language={match[1]}
+                    //           PreTag="div"
+                    //           {...props}
+                    //         >
+                    //           {String(children).replace(/\n$/, '')}
+                    //         </SyntaxHighlighter>
+                    //       ) : (
+                    //         <code className={className} {...props}>
+                    //           {children}
+                    //         </code>
+                    //       );
+                    //     },
+                    //   }}
+                    // >
+                    //   {message.content}
+                    // </ReactMarkdown>
                   )}
                 </div>
                 
