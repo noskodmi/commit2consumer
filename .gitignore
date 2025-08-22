@@ -8,3 +8,5 @@ frontend/.next
 backend/venv
 backend/.env
 .env
+subgraph/node_modules/
+subgraph/generated/

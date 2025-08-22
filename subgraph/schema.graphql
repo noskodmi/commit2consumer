@@ -1,0 +1,8 @@
+type Bounty @entity(immutable: false) {
+  id: ID!
+  issueUrl: String!
+  funder: Bytes!
+  amount: BigInt!
+  resolved: Boolean!
+  resolver: Bytes
+}
