@@ -11,3 +11,5 @@ backend/.env
 subgraph/node_modules/
 subgraph/generated/
 /node_modules
+.vercel
+.next
